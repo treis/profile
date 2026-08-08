@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --font-telescope: "Annie Use Your Telescope", cursive;
+  --font-montserrat: 'Montserrat', sans-serif;
+}
+
+h1, p {
+    color: white
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    background-image: radial-gradient(circle at top, blue, transparent, transparent, transparent), 
+    radial-gradient(circle at bottom, navy, transparent),
+    radial-gradient(circle at right, grey, transparent, transparent, transparent
+    ),
+    radial-gradient(circle at left, cyan, transparent, transparent, transparent, transparent);
+
+    backdrop-filter: blur(6px);
+}
