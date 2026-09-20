@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
 html {
+
     height: 100%;
     width: 100%;
     background-color: black;
@@ -10,12 +11,11 @@ html {
         radial-gradient(circle at bottom, rgba(0, 0, 128, 0.3), transparent),
         radial-gradient(circle at right, rgba(128, 128, 128, 0.3), transparent, transparent, transparent),
         radial-gradient(circle at right, rgba(0, 255, 255, 0.3), transparent, transparent, transparent, transparent);
+        
+        backdrop-filter: blur(100%);
 
-    backdrop-filter: blur(6px);
 }
 
-
-@import "tailwindcss";
 
 @theme {
   --animate-fade-in: fade-in 0.3s ease forwards;
