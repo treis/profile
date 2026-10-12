@@ -11,7 +11,7 @@ function About() {
   return (
     <>
 
-      <section className="bg-gray-900 g-gray-900 animate-fly-in-up p-8 ml-20 mt-40 shadow-xl shadow-cyan-300/20 border-3 border-cyan-300 rounded-lg">
+      <section className="bg-gray-900 animate-fly-in-up p-8 ml-20 mt-40 shadow-xl shadow-cyan-300/20 border-3 border-cyan-300 rounded-lg">
         <article className="text-lg">
           <h1 className="text-xl font-bold text-cyan-300 mb-2">
             About Me
@@ -36,7 +36,7 @@ function Contact() {
 
         <div className="grid grid-cols-2 gap-1">
 
-          <div className="text-lg text-white leading-loose bold font-bold"> 
+          <div className="text-lg text-white leading-loose font-bold"> 
             <p>E-mail:</p>
             <p>Phone Number:</p>
             <p>Location:</p>
@@ -59,7 +59,7 @@ function Contact() {
 
 function ExperienceBlock(props: ExperienceBlockProps) {
   return (
-            <div className="flex items-center text-lg not-even:text-white leading-loose grid grid-cols-2 bg-gray-950 ml-8 mr-8 mt-20 mb-20 pl-10 pr-10 rounded-lg text-white">
+            <div className="items-center text-lg leading-loose grid grid-cols-2 bg-gray-950 ml-8 mr-8 mt-20 mb-20 pl-10 pr-10 rounded-lg text-white">
 
               <div className="m-4">
                 <h1 className="pt-4 font-bold text-cyan-300">{props.date}</h1>
@@ -84,8 +84,8 @@ function App() {
 
   return (
     <>
-      <header className="bg-gray-900/80 flex justify-center pt-5 md:justify-end shadow-cyan-300/40 border-cyan-300 shadow-cyan-300 shadow-2xl border-b-3">
-          <nav className="space-x-12 border-gray-800 text-white 
+      <header className="bg-gray-900/80 flex justify-center pt-5 md:justify-end shadow-cyan-300/40 border-cyan-300 shadow-2xl border-b-3">
+          <nav className="space-x-12 text-white 
           font-extrabold font-mono mb-2 w-1/3 text-xl">
 
             <button
@@ -103,14 +103,14 @@ function App() {
           </nav>
       </header>
 
-      <main className="flex flex-col md:flex-row ">
+      <main className="flex flex-col md:flex-row">
         <section> 
           <article className="pt-70 ml-10 mb-45">
             <p className="text-cyan-300 flex justify-start text-8xl mb-15 font-bold">Thiago</p>
-            <h1 className="text-white text-4xl animate-typing overflow-hidden mb-3 inline ">
-              Actively Learns On The Job To Deliver <span className="bg-gradient-to-r from-blue-500 to-sky-500 to-blue-500 bg-clip-text text-transparent font-extrabold tr"> Real </span>Results 
+            <h1 className="text-white text-4xl overflow-hidden mb-3 inline">
+              Actively Learns On The Job To Deliver <span className="bg-gradient-to-r from-blue-500 to-sky-500 bg-clip-text text-transparent font-extrabold"> Real </span>Results 
             </h1> 
-            <p className="inline text-sky-500 text- blink_me font-bold text-7xl">|</p>
+            <p className="inline text-sky-500 blink_me font-bold text-7xl">|</p>
           </article>
 
         </section>
