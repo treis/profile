@@ -39,7 +39,7 @@ npm run build
 
 ## Deployment
 
-The site deploys to GitHub Pages automatically on every push to `main`, via the workflow in `.github/workflows/deploy.yml`.
+The site deploys to GitHub Pages automatically on every push to `main`, via the workflow in `.github/workflows/deploy.yml` at the repo root (the app itself lives in `mywebsite/`).
 
 One-time setup: in the repo, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
 
