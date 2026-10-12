@@ -59,7 +59,7 @@ function Contact() {
 
 function ExperienceBlock(props: ExperienceBlockProps) {
   return (
-            <div className="items-center text-lg leading-loose grid grid-cols-2 bg-gray-950 ml-8 mr-8 mt-20 mb-20 pl-10 pr-10 rounded-lg text-white">
+            <div className="items-center text-lg leading-loose grid grid-cols-2 bg-gray-950 ml-8 mr-8 mt-20 mb-20 pl-10 pr-10 rounded-lg text-white border-3 border-cyan-300">
 
               <div className="m-4">
                 <h1 className="pt-4 font-bold text-cyan-300">{props.date}</h1>
