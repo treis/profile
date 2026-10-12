@@ -1,34 +1,60 @@
-# React + TypeScript + Vite
+# Thiago Reis — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+My personal portfolio site, built from scratch with React and TypeScript.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** with the new React Compiler enabled
+- **TypeScript**
+- **Vite** for build tooling and dev server
+- **Tailwind CSS 4**, using the newer CSS-first `@theme` configuration
+- **oxlint** for fast linting
 
-## React Compiler
+## Features
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+- Single-page app with a lightweight card-switching navigation (About / Contact), built with `useState` rather than a routing library, since the site is small enough not to need one
+- Custom SVG assets for branding
 
-Note: This will impact Vite dev & build performances.
+## Getting Started
 
-## Expanding the Oxlint configuration
+Clone the repo and install dependencies:
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+git clone <repo-url>
+cd mywebsite
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Run the dev server:
+
+```bash
+npm run dev
+```
+
+Build for production:
+
+```bash
+npm run build
+```
+
+## Deployment
+
+The site deploys to GitHub Pages automatically on every push to `main`, via the workflow in `.github/workflows/deploy.yml`.
+
+One-time setup: in the repo, go to **Settings → Pages** and set **Source** to **GitHub Actions**.
+
+The live site is at `https://<your-username>.github.io/<repo-name>/`. Vite builds with a relative base (`base: './'`), so it works under any repo name.
+
+## Project Structure
+
+```
+src/
+├── App.tsx          # Main app shell, navigation, and card-switching logic
+├── assets/          # SVGs, descriptions, and other static content
+├── index.css        # Global styles and custom animations
+└── main.tsx         # Entry point
+```
+
+## About This Project
+
+This is where I publicly practice working in REACT with Tailwind CSS in a public repositories.
