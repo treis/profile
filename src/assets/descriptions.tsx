@@ -24,7 +24,7 @@ export const sikimg = "https://upload.wikimedia.org/wikipedia/commons/9/97/Sikor
 
 export const shimg = "https://1000logos.net/wp-content/uploads/2021/07/Sacred-Heart-Pioneers-logo.png"
 
-export const archiveimg = "https://media.discordapp.net/attachments/706517786305888266/1551364943209570395/1efc1e98-3078-47f9-88e8-382e78905fe3-removebg-preview.png?ex=6ab1b4b1&is=6ab06331&hm=8a04e66fc8472ca9d4a0e7ddc998eff6cfc21ba72d6bac1eaef490dbfc54b063&=&format=webp&quality=lossless"
+export const archiveimg = "https://res.cloudinary.com/birdease-pro/image/upload/q_auto,f_auto,b_white,c_pad,w_1080,h_1080/EventImages/d5eefaa6-1d1f-4062-9337-23983b8321df"
 
 export const wakemanimg = "https://lirp.cdn-website.com/74bdf828/dms3rep/multi/opt/WAKEMAN-INST+webb-1920w.png"
 
