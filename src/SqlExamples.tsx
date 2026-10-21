@@ -144,7 +144,7 @@ export default function SqlExamples() {
       <div className="w-full bg-gray-900 border-t-3 border-cyan-500 inset-shadow-black inset-shadow-xs">
       <div className="max-w-5xl mx-auto px-4 md:px-8 pt-20 pb-24 space-y-16">
 
-      <Panel title="Vector search for the Sikorsky corrective action assistant">
+      <Panel title="Vector search for the Smart Corrective Action Assistant">
         <p className="text-white text-lg leading-loose max-w-3xl">{vectorSearchSummary}</p>
         <CodeBlock code={vectorSearchSql} label="Vector similarity search query" />
 
