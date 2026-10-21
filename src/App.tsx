@@ -39,12 +39,10 @@ function Contact() {
 
           <div className="text-lg text-white leading-loose font-bold"> 
             <p>E-mail:</p>
-            <p>Location:</p>
           </div> 
 
           <div className="text-lg">
             <p className="text-white leading-loose">{contact.email}</p>
-            <p className="text-white leading-loose">{contact.location}</p>
             <a className="text-cyan-300 underline" href={contact.linkedin}>LinkedIn</a>
           </div>
 
