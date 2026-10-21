@@ -2,7 +2,7 @@ export { default as sf368img } from "./sf368-sample.jpg";
 
 export const sqlIntro = `Two pieces of SQL I've written: the similarity search behind the Smart Corrective Action Assistant, and a PL/pgSQL procedure that summarizes how tags are used across a small relational schema.`;
 
-export const vectorSearchSummary = `The Sikorsky assistant answers engineers' questions from documents like product quality deficiency reports. Each document is split into chunks, every chunk gets an embedding, and both live in PostgreSQL with pgvector. This query finds the chunks closest in meaning to a question.`;
+export const vectorSearchSummary = `The smart assistant answers engineers' questions from documents like product quality deficiency reports. Each document is split into chunks, every chunk gets an embedding, and both live in PostgreSQL with pgvector. This query finds the chunks closest in meaning to a question.`;
 
 export const vectorSearchSql = `SELECT dc.id AS chunk_id,                                   -- which chunk
        dc.doc_id, dc.chunk_index, dc.page, dc.section,      -- where it sits in its document
