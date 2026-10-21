@@ -1,4 +1,5 @@
-import { useState, type ReactElement } from 'react'
+import { useEffect, useState } from 'react'
+import SqlExamples from './SqlExamples'
 import { about, contact, sikorskyCapstone, sikimg, sportsAnalytics, shimg, archiveimg, sikorskyArchives, wakemans, wakemanimg} from "./assets/descriptions";
 
 type ExperienceBlockProps = {
@@ -74,35 +75,59 @@ function ExperienceBlock(props: ExperienceBlockProps) {
           )
 }
 
+type View = 'about' | 'contact' | 'sql';
+
+const views: { id: View; label: string }[] = [
+  { id: 'about', label: 'ABOUT' },
+  { id: 'contact', label: 'CONTACT' },
+  { id: 'sql', label: 'SQL' },
+];
+
+function viewFromHash(): View {
+  const hash = window.location.hash.replace('#', '');
+  return views.some((v) => v.id === hash) ? (hash as View) : 'about';
+}
+
 function App() {
 
-  const [card, setCard]= useState(<About/>);
+  // The current view lives in the URL hash, so #sql can be linked to directly
+  // and the browser back button works.
+  const [view, setView] = useState<View>(viewFromHash);
 
-  function changeCard(newCard: ReactElement) {
-    setCard(newCard)
-  }
+  useEffect(() => {
+    const onHashChange = () => {
+      setView(viewFromHash());
+      window.scrollTo({ top: 0 });
+    };
+    window.addEventListener('hashchange', onHashChange);
+    return () => window.removeEventListener('hashchange', onHashChange);
+  }, []);
 
   return (
     <>
       <header className="bg-gray-900/80 flex justify-center pt-5 md:justify-end shadow-cyan-300/40 border-cyan-300 shadow-2xl border-b-3">
           <nav className="space-x-12 text-white 
-          font-extrabold font-mono mb-2 w-1/3 text-xl">
+          font-extrabold font-mono mb-2 md:w-1/3 text-xl">
 
-            <button
-              className="hover:shadow-cyan-400/30 hover:shadow-2xl"
-              onClick={() => changeCard(<About />)}>
-              ABOUT
-            </button>
-
-            <button 
-              className="hover:shadow-cyan-400 hover:shadow-2xl"
-              onClick={() => changeCard(<Contact />)}>
-                CONTACT
-            </button >
+            {views.map((v) => (
+              <a
+                key={v.id}
+                href={`#${v.id}`}
+                aria-current={view === v.id ? 'page' : undefined}
+                className={`hover:shadow-cyan-400/30 hover:shadow-2xl ${view === v.id ? 'text-cyan-300' : ''}`}>
+                {v.label}
+              </a>
+            ))}
 
           </nav>
       </header>
 
+      {view === 'sql' ? (
+        <main>
+          <SqlExamples />
+        </main>
+      ) : (
+      <>
       <main className="flex flex-col md:flex-row">
         <section> 
           <article className="pt-70 ml-10 mb-45">
@@ -115,7 +140,7 @@ function App() {
 
         </section>
           <article className="w-1/2">
-            {card}
+            {view === 'contact' ? <Contact key="contact" /> : <About key="about" />}
           </article>
         </main>
         
@@ -132,6 +157,8 @@ function App() {
           <ExperienceBlock label={wakemans} img={wakemanimg} date="June 2023 – August 2023" />
 
         </div>
+      </>
+      )}
     </>
   )
 }
