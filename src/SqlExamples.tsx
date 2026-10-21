@@ -64,16 +64,6 @@ function CodeBlock({ code, label }: { code: string; label: string }) {
   );
 }
 
-function Notes({ items }: { items: string[] }) {
-  return (
-    <ul className="mt-6 space-y-3 text-white leading-relaxed list-disc pl-6 marker:text-cyan-300 max-w-3xl">
-      {items.map((note) => (
-        <li key={note}>{note}</li>
-      ))}
-    </ul>
-  );
-}
-
 function Panel({ title, children }: { title: string; children: ReactNode }) {
   return (
     <section className="bg-gray-950 p-6 md:p-10 shadow-xl shadow-cyan-300/20 border-3 border-cyan-300 rounded-lg">
