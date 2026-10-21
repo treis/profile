@@ -3,14 +3,12 @@ import {
   sqlIntro,
   vectorSearchSummary,
   vectorSearchSql,
-  vectorSearchNotes,
   sf368img,
   sf368Caption,
   schemaTables,
   tagSummarySummary,
   tagSummarySql,
   tagSummaryUsage,
-  tagSummaryNotes,
   tagSummaryRows,
 } from "./assets/sqlExamples";
 
